@@ -1,0 +1,17 @@
+{
+  "name": "PyCharm",
+  "version": "2020.2.1",
+  "buildNumber": "202.6948.78",
+  "productCode": "PC",
+  "dataDirectoryName": "PyCharmCE2020.2",
+  "svgIconPath": "bin/pycharm.svg",
+  "launch": [
+    {
+      "os": "Linux",
+      "launcherPath": "bin/pycharm.sh",
+      "javaExecutablePath": "jbr/bin/java",
+      "vmOptionsFilePath": "bin/pycharm64.vmoptions",
+      "startupWmClass": "jetbrains-pycharm-ce"
+    }
+  ]
+}
