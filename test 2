@@ -1,8 +1,7 @@
-this is a test for git
+from tkinter import *
 
-this s
-sdf
-fh
-fyt
-yj
-ef
+root = Tk()
+
+root.title("window")
+
+mainloop()
