@@ -1,6 +1,5 @@
 from tkinter import *
-import Database_backend
-
+from Database_backend import Database
 
 def get_selected_row(event):
     global selected_tuple
@@ -17,24 +16,24 @@ def get_selected_row(event):
 
 def view_command():
     list1.delete(0,END)
-    for row in Database_backend.view():
+    for row in Database.view():
         list1.insert(END,row)
 
 def search_command():
     list1.delete(0,END)
-    for row in Database_backend.search(title_text.get(),author_text.get(),year_text.get(),isbn_text.get()):
+    for row in Database.search(title_text.get(),author_text.get(),year_text.get(),isbn_text.get()):
         list1.insert(END,row)
 
 def add_command():
-    Database_backend.insert(title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
+    Database.insert(title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
     list1.delete(0,END)
     list1.insert(END,(title_text.get(),author_text.get(),year_text.get(),isbn_text.get()))
 
 def delete_command():
-    Database_backend.delete(selected_tuple[0])
+    Database.delete(selected_tuple[0])
 
 def update_command():
-    Database_backend.update(selected_tuple[0],title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
+    Database.update(selected_tuple[0],title_text.get(),author_text.get(),year_text.get(),isbn_text.get())
 
 window=Tk()
 
